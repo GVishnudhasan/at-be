@@ -1,11 +1,14 @@
 module.exports = {
   activeEnv: "PRODUCTION",
   postgres: {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    host: 'dpg-d3okcuqli9vc73c7t2m0-a.oregon-postgres.render.com',
+    port: 5432,
+    user: 'growable_user',
+    password: 'iARz9pp3QwGaTZBZba38bsRufHmQwqN5',
+    database: 'growable', // default DB
+    ssl: {
+      rejectUnauthorized: false, // disables strict SSL certificate validation (useful for self-signed certs)
+    },
   },
   awsS3: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
